@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BÀI TẬP VỀ NHÀ</title>
+
+  <!-- css cdn bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!--CSS-->
+  <link rel="stylesheet" href="./style/index.css">
+</head>
+
+<body>
+  <div class="container m-auto ">
+    <h1 class="text-center">BÀI TẬP VỀ NHÀ</h1>
+    <!--BÀI 1-->
+    <hr>
+    <div>
+      <h3> Quản lý tuyển sinh</h3>
+      <p class="fs-5">Viết chương trình quản lý tuyển sinh, biết được thí sinh đậu hay rớt theo điều kiện
+      </p>
+
+      <form class="row gy-2 gx-3 align-items-center">
+        <div class="col-4">
+          <label class="visually-hidden" for="autoSizingInput">Điểm</label>
+          <input type="number" class="form-control" id="diem-mon-1" placeholder="Điểm môn 1">
+        </div>
+        <div class="col-4">
+          <label class="visually-hidden" for="autoSizingInput">Điểm</label>
+          <input type="number" class="form-control" id="diem-mon-2" placeholder="Điểm môn 2">
+        </div>
+        <div class="col-4">
+          <label class="visually-hidden" for="autoSizingInput">Điểm</label>
+          <input type="number" class="form-control" id="diem-mon-3" placeholder="Điểm môn 3">
+        </div>
+        <div class="col-4">
+          <label class="visually-hidden" for="autoSizingInput">Điểm chuẩn</label>
+          <input type="number" class="form-control" id="diem-chuan" placeholder="Điểm chuẩn">
+        </div>
+        <div class="col-4">
+          <input class="visually-hidden" for="autoSizingSelect"></input>
+          <select class="form-select" id="khu-vuc">
+            <option selected>Chọn khu vực</option>
+            <option value="khu-A" id="khu-A">A</option>
+            <option value="khu-B" id="khu-B">B</option>
+            <option value="khu-C" id="khu-C">C</option>
+
+          </select>
+        </div>
+        <div class="col-4">
+          <input class="visually-hidden" for="autoSizingSelect"></input>
+          <select class="form-select" id="doi-tuong">
+            <option selected>Chọn đối tượng</option>
+            <option value="doiTuong1" id="doiTuong1">1</option>
+            <option value="doiTuong2" id="doiTuong2">2</option>
+            <option value="doiTuong3" id="doiTuong3">3</option>
+
+          </select>
+        </div>
+        <div class="col-auto">
+          <button type='button' class="btn btn-primary" id="kiemTraKetQua">Kiểm tra kết quả</button>
+        </div>
+      </form>
+      <div class="my-2 alert alert-success" id="ket-qua-b1">
+      </div>
+    </div>
+    <hr>
+    <!--BÀI 2-->
+    <h3> Tính tiền điện</h3>
+    <p class="fs-5">Viết chương trình nhập vào thông tin tiêu thụ điện (Tên, Số kW) </p>
+    <form class="row gy-2 gx-3 align-items-center">
+      <div class="col-6">
+        <label class="visually-hidden" for="autoSizingInput">Nhập họ và tên</label>
+        <input type="text" class="form-control" id="ho-ten" placeholder="Nhập họ và tên">
+      </div>
+      <div class="col-6">
+        <label class="visually-hidden" for="autoSizingInput">Số kW</label>
+        <input type="number" class="form-control" id="kw" placeholder="Nhập số kW">
+      </div>
+    </form>
+    <div class="mt-2">
+      <button class="btn btn-primary" id="tinh-tien-dien">Tính tiền điện</button>
+
+    </div>
+    <div class="my-2 alert alert-success" id="ket-qua-b2">
+    </div>
+    <hr>
+    <!--BÀI 3-->
+    <h3> Tính thuế thu nhập cá nhân</h3>
+    <p class="fs-5">Tính và xuất thuế thu nhập cá nhân phải trả theo quy định </p>
+    <form class="row gy-2 gx-3 align-items-center">
+      <div class="col-4">
+        <label class="visually-hidden" for="autoSizingInput">Nhập họ và tên</label>
+        <input type="text" class="form-control" id="ho-va-ten" placeholder="Nhập họ và tên">
+      </div>
+      <div class="col-4">
+        <label class="visually-hidden" for="autoSizingInput">Tổng thu nhập năm</label>
+        <input type="number" class="form-control" id="thu-nhap" placeholder="Nhập tổng thu nhập năm">
+      </div>
+      <div class="col-4">
+        <label class="visually-hidden" for="autoSizingInput">Số người phụ thuộc</label>
+        <input type="number" class="form-control" id="nguoi-phu-thuoc" placeholder="Số người phụ thuộc">
+      </div>
+    </form>
+    <div class="mt-2">
+      <button class="btn btn-primary" id="tinh-tien-thue">Tính tiền thuế</button>
+
+    </div>
+    <div class="my-2 alert alert-success" id="ket-qua-b3">
+    </div>
+    <hr>
+    <!--BÀI 4-->
+    <h3> Tính tiền cáp</h3>
+    <p class="fs-5">Viết chương trình tính hóa đơn khách hàng cho một công ty cáp</p>
+    <form class="row gy-2 gx-3 align-items-center">
+      <div class="col-4">
+        <label class="visually-hidden" for="autoSizingSelect">Chọn loại khách hàng</label>
+        <select class="form-select" id="loaiKH" onchange="handleChange()">
+          <option id ="chon" value="chon">Chọn loại khách hàng</option>
+          <option id= "nhaDan" value="nhaDan">Nhà dân</option>
+          <option id="doanhNghiep" value="doanhNghiep">Doanh nghiệp</option>
+        </select>
+      </div>
+      <div class="col-4">
+        <label class="visually-hidden" for="autoSizingInput">Nhập mã khách hàng</label>
+        <input type="text" class="form-control" id="ma-KH" placeholder="Nhập mã khách hàng">
+      </div>
+      <div class="col-4">
+        <label class="visually-hidden" for="autoSizingInput">Số kênh cao cấp</label>
+        <input type="number" class="form-control" id="soKenhCaoCap" placeholder="Số kênh cao cấp">
+      </div>
+      <div class="col-4">
+        <label for="soKetNoi" class="visually-hidden">Số kết nối</label>
+        <input type="number" id="soKetNoi" class="form-control soketnoi" placeholder="Số kết nối:" ><br>
+      </div>
+    </form>
+    <div class="mt-1">
+      <button class="btn btn-primary" id="tinh-tien-cap" onclick=tinhTienCap()>Tính tiền cáp</button>
+    </div>
+    <div class="my-2 alert alert-success" id="ket-qua-b4">
+    </div>
+    <hr>
+
+  </div>
+
+
+  <!-- cdn bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!--js-->
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>
